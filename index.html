@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones en JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Ejemplos de Funciones en JavaScript</h1>
+    </header>
+
+    <main class="main-content">
+      <!-- Sección: Calculadora -->
+      <section class="section section--calculator">
+        <h2 class="section__title">Calculadora</h2>
+        <form class="calculator__form">
+          <div class="calculator__field">
+            <label for="num1" class="calculator__label">Número 1:</label>
+            <input type="number" id="num1" class="calculator__input" required />
+          </div>
+          <div class="calculator__field">
+            <label for="num2" class="calculator__label">Número 2:</label>
+            <input type="number" id="num2" class="calculator__input" required />
+          </div>
+          <div class="calculator__field">
+            <label for="operator" class="calculator__label">Operador:</label>
+            <select id="operator" class="calculator__select" required>
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+          </div>
+          <button type="button" class="calculator__button">Calcular</button>
+        </form>
+        <p class="calculator__result"></p>
+      </section>
+
+      <!-- Sección: Validación de Mayor de Edad -->
+      <section class="section section--age-check">
+        <h2 class="section__title">Validar Mayor de Edad</h2>
+        <div class="age-check__form">
+          <label for="age" class="age-check__label">Edad:</label>
+          <input type="number" id="age" class="age-check__input" />
+          <button type="button" class="age-check__button">Validar</button>
+        </div>
+        <p class="age-check__result"></p>
+      </section>
+
+      <!-- Sección: Número Aleatorio -->
+      <section class="section section--random-number">
+        <h2 class="section__title">Número Aleatorio</h2>
+        <div class="random-number__form">
+          <label for="min" class="random-number__label">Mínimo:</label>
+          <input type="number" id="min" class="random-number__input" />
+          <label for="max" class="random-number__label">Máximo:</label>
+          <input type="number" id="max" class="random-number__input" />
+          <button type="button" class="random-number__button">Generar</button>
+        </div>
+        <p class="random-number__result"></p>
+      </section>
+
+      <!-- Sección: Calculadora Extendida -->
+      <section class="section section--calculator-extended">
+        <h2 class="section__title">
+          Calculadora con Diferentes Tipos de Funciones
+        </h2>
+        <form class="calculator-extended__form">
+          <div class="calculator-extended__field">
+            <label for="extended-num1" class="calculator-extended__label"
+              >Número 1:</label
+            >
+            <input
+              type="number"
+              id="extended-num1"
+              class="calculator-extended__input"
+              required
+            />
+          </div>
+          <div class="calculator-extended__field">
+            <label for="extended-num2" class="calculator-extended__label"
+              >Número 2:</label
+            >
+            <input
+              type="number"
+              id="extended-num2"
+              class="calculator-extended__input"
+              required
+            />
+          </div>
+          <div class="calculator-extended__field">
+            <label for="extended-operator" class="calculator-extended__label"
+              >Operador:</label
+            >
+            <select
+              id="extended-operator"
+              class="calculator-extended__select"
+              required
+            >
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+          </div>
+          <div class="calculator-extended__buttons">
+            <button
+              type="button"
+              class="calculator-extended__button calculator-extended__button--declarative"
+            >
+              Usar Función Declarativa
+            </button>
+            <button
+              type="button"
+              class="calculator-extended__button calculator-extended__button--expressed"
+            >
+              Usar Función Expresada
+            </button>
+            <button
+              type="button"
+              class="calculator-extended__button calculator-extended__button--arrow"
+            >
+              Usar Función Flecha
+            </button>
+          </div>
+        </form>
+        <p class="calculator-extended__result"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

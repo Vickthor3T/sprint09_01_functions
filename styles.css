@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.main-content {
+  padding: 1rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section__title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.calculator__input,
+.age-check__input,
+.random-number__input,
+.calculator__select,
+.calculator-extended__input,
+.calculator-extended__select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.calculator__button,
+.age-check__button,
+.random-number__button,
+.calculator-extended__button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.calculator__button:hover,
+.age-check__button:hover,
+.random-number__button:hover,
+.calculator-extended__button:hover {
+  background-color: #0056b3;
+}
+
+.calculator__result,
+.age-check__result,
+.random-number__result,
+.calculator-extended__result {
+  font-weight: bold;
+  color: #333;
+}
+
+.calculator-extended__buttons {
+  display: flex;
+  gap: 1rem;
+}
