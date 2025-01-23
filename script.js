@@ -1,165 +1,45 @@
-// Calculadora
-document.querySelector(".calculator__button").addEventListener("click", () => {
-  const num1 = parseFloat(document.getElementById("num1").value);
-  const num2 = parseFloat(document.getElementById("num2").value);
-  const operator = document.getElementById("operator").value;
-  const resultElement = document.querySelector(".calculator__result");
-
-  if (isNaN(num1) || isNaN(num2)) {
-    resultElement.textContent = "Por favor, ingrese números válidos.";
-    return;
-  }
-
-  let result;
-  switch (operator) {
-    case "+":
-      result = num1 + num2;
-      break;
-    case "-":
-      result = num1 - num2;
-      break;
-    case "*":
-      result = num1 * num2;
-      break;
-    case "/":
-      result = num2 !== 0 ? num1 / num2 : "Error: División por cero";
-      break;
-    default:
-      result = "Operador no válido";
-      break;
-  }
-
-  resultElement.textContent = `Resultado: ${result}`;
-});
-
-// Validar Mayor de Edad
-document.querySelector(".age-check__button").addEventListener("click", () => {
-  const age = parseInt(document.getElementById("age").value);
-  const resultElement = document.querySelector(".age-check__result");
-
-  if (isNaN(age)) {
-    resultElement.textContent = "Por favor, ingrese una edad válida.";
-    return;
-  }
-
-  resultElement.textContent = age >= 18 ? "Mayor de edad" : "Menor de edad";
-});
-
-// Número Aleatorio
-document
-  .querySelector(".random-number__button")
-  .addEventListener("click", () => {
-    const min = parseInt(document.getElementById("min").value);
-    const max = parseInt(document.getElementById("max").value);
-    const resultElement = document.querySelector(".random-number__result");
-
-    if (isNaN(min) || isNaN(max)) {
-      resultElement.textContent = "Por favor, ingrese valores válidos.";
-      return;
-    }
-
-    const random = Math.floor(Math.random() * (max - min + 1)) + min;
-    resultElement.textContent = `Número aleatorio: ${random}`;
-  });
-
-// Funciones Declarativa, Expresada y Flecha
-
-document
-  .querySelector(".calculator-extended__button--declarative")
-  .addEventListener("click", () => {
-    const num1 = parseFloat(document.getElementById("extended-num1").value);
-    const num2 = parseFloat(document.getElementById("extended-num2").value);
-    const operador = document.getElementById("extended-operator").value;
-
-    extendedResult.textContent = `Resultado (Declarativa): ${calcularDeclarativa(
-      num1,
-      num2,
-      operador
-    )}`;
-
-    console.log(calcularDeclarativa(num1, num2, operador));
-  });
-
-function calcularDeclarativa(num1, num2, operador) {
-  switch (operador) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
-    case "/":
-      if (num2 !== 0) {
-        return num1 / num2;
-      } else {
-        return "Error: División por cero";
-      }
-      // TODO MENOS UN CERO      ES VERDADERO?             ES FALSO??
-      return num2 !== 0 ? num1 / num2 : "Error: División por cero";
-    default:
-      return "Operador no válido";
-  }
-}
-
-const extendedResult = document.querySelector(".calculator-extended__result");
-
-document
-  .querySelector(".calculator-extended__button--expressed")
-  .addEventListener("click", () => {
-    const num1 = parseFloat(document.getElementById("extended-num1").value);
-    const num2 = parseFloat(document.getElementById("extended-num2").value);
-    const operador = document.getElementById("extended-operator").value;
-
-    extendedResult.textContent = `Resultado (Expresada): ${calcularExpresada(
-      num1,
-      num2,
-      operador
-    )}`;
-  });
-
-const calcularExpresada = function (num1, num2, operador) {
-  switch (operador) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
-    case "/":
-      return num2 !== 0 ? num1 / num2 : "Error: División por cero";
-    default:
-      return "Operador no válido";
-  }
+//aqui arriba const
+const title = document.getElementById("titulo");
+const paragrapgh = document.getElementById("parrafo");
+const input = document.getElementById("input");
+const button1 = document.getElementById("boton1");
+const button2 = document.getElementById("boton2");
+//funciones
+const salude = () => {
+  console.log("HOLA A TODOS ME ACABAN DE DAR CLICK!!");
 };
 
-//sintaxus para una funcion declarativo, si tiene diferencias
+//acciones
+button1.addEventListener("click", salude);
+button2.addEventListener("click", () => {
+  console.log("Esta es una funcion anonima");
+});
 
+//logica if, else
 
-const calcularFlecha = (num1, num2, operador) => {
-  switch (operador) {
-    case "+":
-      return num1 + num2;
-    case "-":
-      return num1 - num2;
-    case "*":
-      return num1 * num2;
-    case "/":
-      return num2 !== 0 ? num1 / num2 : "Error: División por cero";
-    default:
-      return "Operador no válido";
-  }
+console.dir(title);
+console.dir(paragrapgh);
+console.dir(input);
+console.dir(button1);
+
+setTimeout(() => {
+  title.textContent = "LO HE CAMBIADO DESDE JS";
+}, 10000);
+
+const silla = {
+  color: "negro",
+  numeroDePatas: 4,
+  ancho: 30,
+  alto: 60,
 };
 
-document
-  .querySelector(".calculator-extended__button--arrow")
-  .addEventListener("click", () => {
-    const num1 = parseFloat(document.getElementById("extended-num1").value);
-    const num2 = parseFloat(document.getElementById("extended-num2").value);
-    const operador = document.getElementById("extended-operator").value;
+const perro = {
+  raza: "Husky",
+  color: "mix",
 
-    extendedResult.textContent = `Resultado (Flecha): ${calcularFlecha(
-      num1,
-      num2,
-      operador
-    )}`;
-  });
+  ladrar: function () {
+    console.log("gua gua");
+  },
+};
+
+//perro.ladrar();
